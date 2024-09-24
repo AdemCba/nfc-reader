@@ -6,7 +6,7 @@ const NFCReader = () => {
 
     const readNFC = async () => {
         if ('NDEFReader' in window) {
-            const ndef = new NDEFReader();
+            const ndef = new window.NDEFReader();
             try {
                 await ndef.scan();
                 console.log("NFC tarayıcı başlatıldı.");
